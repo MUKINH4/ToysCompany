@@ -9,9 +9,13 @@ API REST para cadastro e gerenciamento de brinquedos.
 - Persistência de dados com Entity Framework Core
 
 ## Como rodar
-1. Instale dependências: `dotnet restore`
-2. Execute: `dotnet run`
-3. Configure o banco em `appsettings.json`
+1. Clonar o repositório
+```bash
+git clone https://github.com/MUKINH4/ToysCompany.git
+```
+2. Configure o banco em `appsettings.json`
+3. Instale dependências: `dotnet restore`
+4. Execute: `dotnet run`
 
 ## Estrutura de Pastas
 ```
@@ -82,7 +86,20 @@ ToysCompany/
 ]
 ```
 
-## Exemplo de requisição de edição (PUT /api/Brinquedo/3)
+## Exemplo de resposta de listagem com ID (GET /api/Brinquedo/3)
+```json
+{
+  "id": 3,
+  "nome": "Hot Wheels",
+  "tipo": "Carrinho de Brinquedo",
+  "classificacao": 14,
+  "tamanho": 5,
+  "preco": 59.9
+}
+```
+
+
+## Exemplo de requisição de edição (PUT /api/Brinquedo/4)
 ```json
 {
   "nome": "Boneca",
@@ -96,6 +113,20 @@ ToysCompany/
 ## Exemplo de requisição de remoção (DELETE /api/Brinquedo/3)
 Sem corpo. Apenas envie o método DELETE para o endpoint com o ID desejado.
 
+# Os endpoints podem ser testados via Postman ou Swagger
 
+## Postman
+- Basta acessar a api via e usar os verbos HTTP: http://localhost:5288/api/Brinquedo
 
+## Swagger
+- Basta acessar https://localhost:7078/swagger/index.html
 
+![Swagger](docs/swagger.png)
+
+![GET](docs/GET.png)
+
+![POST](docs/POST.png)
+
+![DELETE](docs/DELETE.png)
+
+![PUT](docs/PUT.png)
