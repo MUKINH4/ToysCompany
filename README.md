@@ -22,9 +22,6 @@ ToysCompany/
 ├── ToysCompany.csproj
 ├── ToysCompany.csproj.user
 ├── ToysCompany.http
-├── bin/
-│   └── Debug/
-│       └── net8.0/
 ├── Context/
 │   └── BrinquedoDbContext.cs
 ├── Controllers/
@@ -37,9 +34,6 @@ ToysCompany/
 │   └── BrinquedoDbContextModelSnapshot.cs
 ├── Models/
 │   └── Brinquedo.cs
-├── obj/
-│   └── Debug/
-│       └── net8.0/
 ├── Properties/
 │   └── launchSettings.json
 ├── Services/
@@ -49,33 +43,33 @@ ToysCompany/
 
 ## Endpoints principais
 
-- **GET /api/brinquedo**: Lista todos os brinquedos
-- **GET /api/brinquedo/{id}**: Busca brinquedo por ID
-- **POST /api/brinquedo**: Cadastra novo brinquedo
-- **PUT /api/brinquedo/{id}**: Edita brinquedo existente
-- **DELETE /api/brinquedo/{id}**: Remove brinquedo
+- **GET /api/Brinquedo**: Lista todos os brinquedos
+- **GET /api/Brinquedo/{id}**: Busca brinquedo por ID
+- **POST /api/Brinquedo**: Cadastra novo brinquedo
+- **PUT /api/Brinquedo/{id}**: Edita brinquedo existente
+- **DELETE /api/Brinquedo/{id}**: Remove brinquedo
 
-## Exemplo de JSON para cadastro (POST /api/brinquedo)
+## Exemplo de JSON para cadastro (POST /api/Brinquedo)
 ```json
 {
   "nome": "Carrinho",
   "tipo": "Veículo",
   "classificacao": 14,
   "tamanho": 25.5,
-  "preco": 99.90
+  "preco": 99.9
 }
 ```
 
-## Exemplo de resposta de listagem (GET /api/brinquedo)
+## Exemplo de resposta de listagem (GET /api/Brinquedo)
 ```json
 [
   {
     "id": 3,
-    "nome": "string",
-    "tipo": "string",
-    "classificacao": 12,
-    "tamanho": 0,
-    "preco": 0
+    "nome": "Hot Wheels",
+    "tipo": "Carrinho de Brinquedo",
+    "classificacao": 14,
+    "tamanho": 5,
+    "preco": 59.9
   },
   {
     "id": 22,
@@ -88,7 +82,7 @@ ToysCompany/
 ]
 ```
 
-## Exemplo de requisição de edição (PUT /api/brinquedo/3)
+## Exemplo de requisição de edição (PUT /api/Brinquedo/3)
 ```json
 {
   "nome": "Boneca",
@@ -99,7 +93,7 @@ ToysCompany/
 }
 ```
 
-## Exemplo de requisição de remoção (DELETE /api/brinquedo/3)
+## Exemplo de requisição de remoção (DELETE /api/Brinquedo/3)
 Sem corpo. Apenas envie o método DELETE para o endpoint com o ID desejado.
 
 
